@@ -1,0 +1,180 @@
+.reasons {
+
+    width: 100%;
+    padding: 90px 0;
+    background: #f8f6f1;
+
+}
+
+.reasons-heading {
+
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 60px;
+
+}
+
+.reasons-heading span {
+
+    color: #caa338;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+
+}
+
+.reasons-heading h2 {
+
+    margin: 18px 0;
+    font-size: 52px;
+    color: #222;
+    font-family: Georgia, serif;
+
+}
+
+.reasons-heading p {
+
+    max-width: 720px;
+    margin: auto;
+    color: #666;
+    line-height: 1.8;
+    font-size: 18px;
+
+}
+
+.reasons-grid {
+
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+}
+
+.reason-card {
+
+    background: #fff;
+    border-radius: 18px;
+    padding: 40px 30px;
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+    transition: .3s;
+
+}
+
+.reason-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.reason-icon {
+
+    width: 80px;
+    height: 80px;
+
+    margin: auto;
+    margin-bottom: 25px;
+
+    background: #d4ae39;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 36px;
+
+}
+
+.reason-card h3 {
+
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 15px;
+    font-family: Georgia, serif;
+
+}
+
+.reason-card p {
+
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+
+}
+
+@media(max-width:992px) {
+
+    .reasons-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .reasons-heading h2 {
+
+        font-size: 40px;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .reasons {
+
+        padding: 60px 0;
+
+    }
+
+    .reasons-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .reasons-heading h2 {
+
+        font-size: 34px;
+
+    }
+
+}
+
+@media(max-width:500px) {
+
+    .reasons-heading h2 {
+
+        font-size: 28px;
+
+    }
+
+    .reasons-heading p {
+
+        font-size: 15px;
+
+    }
+
+    .reason-card {
+
+        padding: 30px 20px;
+
+    }
+
+    .reason-card h3 {
+
+        font-size: 24px;
+
+    }
+
+}

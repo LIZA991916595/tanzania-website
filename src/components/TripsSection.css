@@ -1,0 +1,161 @@
+.trips {
+    width: 100%;
+    padding: 90px 0;
+    background: #f8f6f1;
+}
+
+.trips-header {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.trips-header span {
+    color: #c8a43c;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.trips-header h2 {
+    margin: 18px 0;
+    font-size: 52px;
+    color: #222;
+    font-family: Georgia, serif;
+}
+
+.trips-header p {
+    max-width: 720px;
+    margin: auto;
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.trip-grid {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.trip-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+    transition: .35s;
+}
+
+.trip-card:hover {
+    transform: translateY(-8px);
+}
+
+.trip-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.trip-content {
+    padding: 28px;
+}
+
+.trip-info {
+    display: flex;
+    justify-content: space-between;
+    color: #c8a43c;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.trip-content h3 {
+    font-size: 30px;
+    color: #222;
+    margin-bottom: 15px;
+    font-family: Georgia, serif;
+}
+
+.trip-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.trip-content button {
+    background: #d4ae39;
+    color: #fff;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 15px;
+}
+
+.trip-content button:hover {
+    background: #b88f18;
+}
+
+@media(max-width:992px) {
+
+    .trip-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .trips-header h2 {
+        font-size: 40px;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .trips {
+        padding: 60px 0;
+    }
+
+    .trip-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trips-header h2 {
+        font-size: 34px;
+    }
+
+    .trip-card img {
+        height: 220px;
+    }
+
+}
+
+@media(max-width:500px) {
+
+    .trips-header h2 {
+        font-size: 28px;
+    }
+
+    .trips-header p {
+        font-size: 15px;
+    }
+
+    .trip-content {
+        padding: 20px;
+    }
+
+    .trip-content h3 {
+        font-size: 24px;
+    }
+
+    .trip-content button {
+        width: 100%;
+    }
+
+}

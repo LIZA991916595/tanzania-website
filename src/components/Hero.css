@@ -1,0 +1,224 @@
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 650px;
+
+    overflow: hidden;
+
+}
+
+.heroImage {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+.overlay {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, .55),
+            rgba(0, 0, 0, .15),
+            transparent);
+
+}
+
+.heroContent {
+
+    position: absolute;
+
+    bottom: 70px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    width: 100%;
+
+    z-index: 10;
+
+}
+
+.heroContent h1 {
+
+    color: white;
+
+    font-size: 72px;
+
+    font-family: Georgia, serif;
+
+    margin-bottom: 10px;
+
+}
+
+.heroContent p {
+
+    color: white;
+
+    font-size: 20px;
+
+    margin-bottom: 35px;
+
+}
+
+.thumbs {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+}
+
+.thumb {
+
+    width: 110px;
+
+    height: 70px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    object-fit: cover;
+
+    opacity: .6;
+
+    border: 3px solid transparent;
+
+    transition: .3s;
+
+}
+
+.thumb:hover {
+
+    opacity: 1;
+
+    transform: scale(1.05);
+
+}
+
+.active {
+
+    opacity: 1;
+
+    border: 3px solid white;
+
+}
+
+.arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 28px;
+
+    background: #e5c03b;
+
+    color: white;
+
+    z-index: 100;
+
+}
+
+.left {
+
+    left: 40px;
+
+}
+
+.right {
+
+    right: 40px;
+
+}
+
+.arrow:hover {
+
+    background: #caa217;
+
+}
+
+.curve {
+
+    position: absolute;
+
+    bottom: -1px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 120px;
+
+    background: white;
+
+    clip-path: ellipse(75% 100% at 50% 100%);
+
+}
+
+@media(max-width:900px) {
+
+    .hero {
+
+        height: 520px;
+
+    }
+
+    .heroContent h1 {
+
+        font-size: 48px;
+
+    }
+
+    .thumb {
+
+        width: 80px;
+
+        height: 55px;
+
+    }
+
+    .arrow {
+
+        width: 45px;
+
+        height: 45px;
+
+    }
+
+}
