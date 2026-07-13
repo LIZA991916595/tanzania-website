@@ -13,9 +13,11 @@ const tabs = [
 
 function NavbarTabs() {
     const [active, setActive] = useState("intro");
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const handleClick = (tab) => {
         setActive(tab.id);
+        setMenuOpen(false);
 
         const section = document.getElementById(tab.id);
 
@@ -28,9 +30,16 @@ function NavbarTabs() {
     };
 
     return (
+        <section className="navbar-tabs">
 
-        <section className="navbar-tabs" id="navbar-tabs">
-            <div className="tabs-container">
+            <button
+                className="menu-btn"
+                onClick={() => setMenuOpen(!menuOpen)}
+            >
+                ☰
+            </button>
+
+            <div className={`tabs-container ${menuOpen ? "show" : ""}`}>
                 {tabs.map((tab) => (
                     <button
                         key={tab.id}
@@ -41,8 +50,8 @@ function NavbarTabs() {
                     </button>
                 ))}
             </div>
-        </section>
 
+        </section>
     );
 }
 

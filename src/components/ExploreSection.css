@@ -298,3 +298,77 @@ section {
     }
 
 }
+
+/* ================= EXPLORE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .explore {
+        padding: 50px 0;
+    }
+
+    .explore-heading {
+        width: 95%;
+        margin-bottom: 40px;
+    }
+
+    .explore-heading h2 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .explore-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .explore-btn {
+        width: 100%;
+    }
+
+    .map-wrapper {
+        flex-direction: column;
+        gap: 25px;
+        width: 95%;
+    }
+
+    .map-left {
+        width: 100%;
+        height: 300px;
+    }
+
+    .map-left img {
+        height: 100%;
+    }
+
+    .map-right {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .destination-card {
+        flex-direction: column;
+    }
+
+    .destination-card img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .destination-content {
+        padding: 18px;
+    }
+
+    .destination-content h3 {
+        font-size: 22px;
+    }
+
+    .destination-content p {
+        font-size: 15px;
+    }
+
+    .destination-content button {
+        width: 100%;
+    }
+
+}

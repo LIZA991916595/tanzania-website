@@ -116,3 +116,55 @@ section {
     border-top-left-radius: 100% 10px;
     border-top-right-radius: 100% 10px;
 }
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-content {
+        bottom: 25px;
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .thumb-row {
+        gap: 8px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 0 10px;
+    }
+
+    .thumb {
+        width: 70px;
+        height: 50px;
+        flex-shrink: 0;
+    }
+
+    .circle-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .wishlist {
+        width: 42px;
+        height: 42px;
+        right: 15px;
+        bottom: 20px;
+        font-size: 18px;
+    }
+
+    .hero-bottom {
+        height: 10px;
+    }
+
+}

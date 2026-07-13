@@ -183,3 +183,66 @@ section {
     transform: scale(0.88);
     opacity: 0.9;
 }
+
+/* ================= TRIPS RESPONSIVE ================= */
+
+@media (max-width:768px) {
+
+    .trips {
+        padding: 50px 0;
+    }
+
+    .trips-header {
+        width: 95%;
+        margin: auto;
+        margin-bottom: 35px;
+    }
+
+    .trips-header h2 {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    .all-trip-btn {
+        width: 100%;
+    }
+
+    .trips-wrapper {
+        width: 95%;
+        margin: auto;
+    }
+
+    .trip-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .trip-card,
+    .trip-card.active {
+        width: 100%;
+        margin-top: 0;
+        transform: none;
+    }
+
+    .trip-image img,
+    .trip-card.active .trip-image img {
+        width: 100%;
+        height: 260px;
+    }
+
+    .trip-details h3,
+    .trip-card.active .trip-details h3 {
+        font-size: 26px;
+    }
+
+    .trip-details h4,
+    .trip-card.active .trip-details h4 {
+        font-size: 22px;
+    }
+
+    .slider-arrow {
+        display: none;
+    }
+
+}

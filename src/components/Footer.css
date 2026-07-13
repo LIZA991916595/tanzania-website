@@ -403,3 +403,77 @@ section {
     }
 
 }
+
+/* ================= FOOTER RESPONSIVE ================= */
+
+@media (max-width:768px) {
+
+    .footer-top {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .footer-logo {
+        font-size: 40px;
+    }
+
+    .footer-text {
+        max-width: 100%;
+        margin: auto;
+        margin-bottom: 25px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-contact {
+        padding: 25px 20px;
+    }
+
+    .footer-contact h2 {
+        font-size: 30px;
+    }
+
+    .footer-form {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-form input,
+    .footer-form select {
+        width: 100%;
+    }
+
+    .footer-contact button {
+        width: 100%;
+    }
+
+    .newsletter {
+        padding: 25px 20px;
+    }
+
+    .newsletter h2 {
+        font-size: 30px;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        width: 95%;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-bottom-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+}
