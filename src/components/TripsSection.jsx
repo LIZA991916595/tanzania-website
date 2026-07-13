@@ -1,86 +1,126 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TripsSection.css";
 
 const trips = [
     {
         id: 1,
-        image: "https://images.unsplash.com/photo-1516939884455-1445c8652f83?w=900",
-        title: "Classic Tanzania Safari",
-        duration: "7 Days",
-        price: "From $2,850",
-        description:
-            "Explore Serengeti, Ngorongoro Crater and Tarangire National Park on this unforgettable safari."
+        image: "https://thumbs.dreamstime.com/z/beautiful-girl-group-tourists-jungle-near-mondica-camp-borderland-congo-central-african-rep-63033976.jpg",
+        title: "Tanzania and Kenya",
+        nights: "7 nights",
+        price: "From £4,995 – £11,866 pp",
     },
     {
         id: 2,
-        image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900",
-        title: "Luxury Serengeti Safari",
-        duration: "10 Days",
-        price: "From $5,200",
-        description:
-            "Stay in luxury lodges while enjoying exceptional wildlife viewing in Tanzania's famous parks."
+        image: "https://plus.unsplash.com/premium_photo-1730233719882-890f7043eb9e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8amFndWFyfGVufDB8fDB8fHww",
+        title: "A Safari Exploration",
+        nights: "22 nights",
+        price: "From £29,105 pp",
     },
     {
         id: 3,
-        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900",
-        title: "Safari & Zanzibar",
-        duration: "12 Days",
-        price: "From $4,950",
-        description:
-            "Combine thrilling game drives with relaxing white-sand beaches in beautiful Zanzibar."
-    }
+        image: "https://cms.thefollowup.in/cdn/uploads/articles/1657737023_14nblttelephant_4.jpg",
+        title: "Tanzania’s Elephant and Great Migration",
+        nights: "9 nights",
+        price: "From £9,974 – £10,940 pp",
+    },
+    {
+        id: 4,
+        image: "https://staticimg.amarujala.com/assets/images/2020/06/23/lions_1592900394.jpeg?w=750",
+        title: "Northern Tanzania and Zanzibar Adventure",
+        nights: "12 nights",
+        price: "From £6,020 – £8,663 pp",
+    },
+    {
+        id: 5,
+        image: "https://www.shutterstock.com/image-photo/ranthambore-national-park-rajasthan-india-260nw-2457581013.jpg",
+        title: "Luxury Tanzania Safari",
+        nights: "12 nights",
+        price: "From £8,484 pp",
+    },
 ];
 
 function TripsSection() {
+    const [active, setActive] = useState(2);
+
+    const nextSlide = () => {
+        setActive((prev) => (prev + 1) % trips.length);
+    };
+
+    const prevSlide = () => {
+        setActive((prev) => (prev - 1 + trips.length) % trips.length);
+    };
+
     return (
-        <section className="trips">
+        <section className="trips" id="trips">
 
             <div className="trips-header">
 
-                <span>POPULAR TOURS</span>
+                <span>TANZANIA SAFARIS</span>
 
                 <h2>Tanzania Trips</h2>
 
-                <p><h3>
-                    <b>If there is one park everyone should visit then it just has to be the Serengeti .Go off piste in Tanzania, however, and you'll find quite parks away from the crowds. this is a wonderfully diverse country that's absolutely packed with wildlife.</b>
-                </h3>
-
-                </p>
+                <button className="all-trip-btn">
+                    All Tanzania trips
+                </button>
 
             </div>
 
-            <div className="trip-grid">
+            <div className="trips-wrapper">
 
-                {trips.map((trip) => (
+                <button className="slider-arrow left" onClick={prevSlide}>
+                    ←
+                </button>
 
-                    <div className="trip-card" key={trip.id}>
+                <div className="trip-list">
 
-                        <img src={trip.image} alt={trip.title} />
+                    {trips.map((trip, index) => (
 
-                        <div className="trip-content">
+                        <div
+                            key={trip.id}
+                            className={
+                                index === active
+                                    ? "trip-card active"
+                                    : "trip-card"
+                            }
+                        >
 
-                            <div className="trip-info">
+                            <div className="trip-image">
 
-                                <span>{trip.duration}</span>
+                                <img
+                                    src={trip.image}
+                                    alt={trip.title}
+                                />
 
-                                <span>{trip.price}</span>
+                                <button className="heart-btn">
+                                    ♡
+                                </button>
 
                             </div>
 
-                            <h3>{trip.title}</h3>
+                            <div className="trip-details">
 
-                            <p>{trip.description}</p>
+                                <h3>{trip.title}</h3>
 
-                            <button>View Trip</button>
+                                <p className="trip-meta">
+                                    Tanzania • {trip.nights}
+                                </p>
+
+                                <h4>{trip.price}</h4>
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    ))}
 
-                ))}
+                </div>
+
+                <button className="slider-arrow right" onClick={nextSlide}>
+                    →
+                </button>
 
             </div>
-
+            <div className="trips-bottom-shape"></div>
         </section>
     );
 }

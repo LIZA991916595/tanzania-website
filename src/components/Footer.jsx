@@ -3,76 +3,97 @@ import "./Footer.css";
 
 function Footer() {
     return (
-        <footer className="footer">
+        <footer className="footer" id="footeer">
 
             <div className="footer-top">
 
-                <div className="footer-about">
+                <div className="footer-left">
 
                     <h2>Tanzania Safaris</h2>
-
-                    <p>
+                    <p className="footer-text">
                         Discover unforgettable Tanzania safaris, luxury lodges,
-                        wildlife adventures and tailor-made holidays with our
-                        Africa travel experts.
+                        wildlife adventures and tailor-made holidays across East Africa.
                     </p>
 
                     <div className="social-icons">
+                        <i className="fab fa-linkedin-in"></i>
                         <i className="fab fa-facebook-f"></i>
                         <i className="fab fa-instagram"></i>
-                        <i className="fab fa-twitter"></i>
                         <i className="fab fa-youtube"></i>
                     </div>
+                    <div className="footer-language">
+                        <span>🇬🇧 English ▼</span>
+                    </div>
 
+                    <div className="trustpilot">
+                        <h4>Excellent</h4>
+                        <p>★★★★★</p>
+                        <small>Based on 1,586 reviews</small>
+                    </div>
                 </div>
 
                 <div className="footer-links">
 
-                    <h3>Destinations</h3>
-
                     <ul>
-                        <li>Serengeti</li>
-                        <li>Ngorongoro</li>
-                        <li>Tarangire</li>
-                        <li>Zanzibar</li>
-                        <li>Ruaha</li>
+                        <li>Destinations</li>
+                        <li>Trips</li>
+                        <li>When to Go</li>
+                        <li>Your First Safari?</li>
+                        <li>FAQs</li>
+                        <li>Find Us</li>
+                        <li>About Us</li>
                     </ul>
 
                 </div>
 
                 <div className="footer-links">
 
-                    <h3>Quick Links</h3>
-
                     <ul>
-                        <li>Home</li>
-                        <li>Safaris</li>
-                        <li>Lodges</li>
-                        <li>Gallery</li>
-                        <li>Contact</li>
+                        <li>General Information</li>
+                        <li>Cookie Policy</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms & Conditions</li>
                     </ul>
 
                 </div>
 
-                <div className="footer-contact">
+                <div className="newsletter">
 
-                    <h3>Contact</h3>
+                    <h2>Sign up to our Newsletter</h2>
+                    <div className="footer-form">
+                        <input type="text" placeholder="First Name" />
 
-                    <p>📍Bhubaneswr, Odisha</p>
-                    <p>📞 +91 7853842449</p>
-                    <p>✉ srbjyotirmayee999@gmail.com</p>
+                        <input type="text" placeholder="Last Name" />
 
-                    <button>Plan My Safari</button>
+                        <input type="email" placeholder="Email" />
+                        <select>
+                            <option>Region*</option>
+                            <option>India</option>
+                            <option>Africa</option>
+                            <option>Europe</option>
+                        </select>
+                    </div>
+
+                    <p className="privacy">
+                        Your personal details are protected.
+                    </p>
+
+                    <button>Sign Up</button>
+
+
 
                 </div>
-
             </div>
-
             <div className="footer-bottom">
 
                 <p>
                     © 2026 Tanzania Safaris. All Rights Reserved.
                 </p>
+                <div className="footer-bottom-links">
+                    <span>Privacy Policy</span>
+                    <span>Terms & Conditions</span>
+                    <span>Cookie Policy</span>
+                </div>
 
             </div>
 

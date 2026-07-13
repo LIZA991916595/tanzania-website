@@ -2,39 +2,47 @@ import React, { useState } from "react";
 import "./NavbarTabs.css";
 
 const tabs = [
-    "At a Glance",
-    "Safari Parks",
-    "Areas",
-    "Where to Stay",
-    "When to Go",
-    "Trip Ideas",
-    "Experiencess",
-
+    { name: "At a Glance", id: "intro" },
+    { name: "Safari Parks", id: "visit" },
+    { name: "Areas", id: "trips" },
+    { name: "Where to Stay", id: "lodges" },
+    { name: "When to Go", id: "reasons" },
+    { name: "Trip Ideas", id: "news" },
+    { name: "Experiences", id: "experts" },
 ];
 
 function NavbarTabs() {
-    const [active, setActive] = useState("Overview");
+    const [active, setActive] = useState("intro");
+
+    const handleClick = (tab) => {
+        setActive(tab.id);
+
+        const section = document.getElementById(tab.id);
+
+        if (section) {
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    };
 
     return (
-        <section className="navbar-tabs">
 
+        <section className="navbar-tabs" id="navbar-tabs">
             <div className="tabs-container">
-
                 {tabs.map((tab) => (
-
                     <button
-                        key={tab}
-                        className={active === tab ? "tab active-tab" : "tab"}
-                        onClick={() => setActive(tab)}
+                        key={tab.id}
+                        className={`tab ${active === tab.id ? "active-tab" : ""}`}
+                        onClick={() => handleClick(tab)}
                     >
-                        {tab}
+                        {tab.name}
                     </button>
-
                 ))}
-
             </div>
-
         </section>
+
     );
 }
 

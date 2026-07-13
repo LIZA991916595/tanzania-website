@@ -1,5 +1,6 @@
 import React from "react";
 import "./ExploreSection.css";
+import map from "../assets/images/map.png";
 
 const destinations = [
     {
@@ -30,7 +31,7 @@ const destinations = [
 
 function ExploreSection() {
     return (
-        <section className="explore">
+        <section className="explore" id="explore">
 
             <div className="explore-heading">
 
@@ -38,15 +39,26 @@ function ExploreSection() {
 
                 <h2>Discover Tanzania's Top Destinations</h2>
 
-                <button>All Parks</button>
-                <button>All Accommodation</button>
+                <button
+                    className="explore-btn"
+                    onClick={() => alert("All Parks")}
+                >
+                    All Parks
+                </button>
+
+                <button
+                    className="explore-btn"
+                    onClick={() => alert("All Accommodation")}
+                >
+                    All Accommodation
+                </button>
             </div>
 
             <div className="map-wrapper">
                 <div className="map-left">
 
                     <img
-                        src="/images/map.png"
+                        src={map}
                         alt="Tanzania Map"
                     />
 

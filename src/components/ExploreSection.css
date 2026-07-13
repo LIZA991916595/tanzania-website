@@ -28,6 +28,30 @@
     margin-bottom: 20px;
 }
 
+.explore-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.explore-btn {
+    background: #fff;
+    border: 2px solid #222;
+    color: #222;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: #222;
+    color: #fff;
+}
+
 .explore-heading p {
     max-width: 760px;
     margin: auto;

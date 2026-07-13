@@ -42,7 +42,7 @@ const lodges = [
 
 function LodgesSection() {
     return (
-        <section className="lodges">
+        <section className="lodges" id="lodges">
 
             <div className="lodges-heading">
 

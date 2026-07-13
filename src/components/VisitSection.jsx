@@ -3,7 +3,7 @@ import "./VisitSection.css";
 
 function VisitSection() {
     return (
-        <section className="visit">
+        <section className="visit" id="visit">
 
             <div className="visit-container">
 

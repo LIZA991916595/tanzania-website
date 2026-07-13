@@ -1,14 +1,15 @@
 import "./ExpertsSection.css";
-
+import visiters from "../assets/images/visiters.png";
+import ravi from "../assets/images/ravi.jpg";
 export default function ExpertsSection() {
     return (
-        <section className="expert-section">
+        <section className="expert-section" id="experts">
             <div className="expert-container">
 
                 {/* LEFT */}
                 <div className="expert-left">
                     <span className="expert-tag">
-                        TALK TO SOMEONE WHO'S BEEN THERE
+                        <h1>TALK TO SOMEONE WHO'S BEEN THERE</h1>
                     </span>
 
                     <h2>
@@ -16,12 +17,12 @@ export default function ExpertsSection() {
                         camps and beaches inside out.
                     </h2>
 
-                    <p>
+                    <h3>
                         Real expertise doesn't come from a few trips to Africa.
                         All our specialists have either been guides, run the camps,
                         or grown up and lived in Africa. That's over 600 years of
                         genuine safari experience.
-                    </p>
+                    </h3>
 
                     <div className="expert-buttons">
                         <button className="enquiry-btn">
@@ -38,12 +39,12 @@ export default function ExpertsSection() {
 
                     <div className="expert-profile">
                         <img
-                            src="/images/expert1.jpg"
+                            src={ravi}
                             alt="Expert"
                         />
 
                         <div>
-                            <h4>LAUREN NOAKES</h4>
+                            <h4>Ravi Sahu</h4>
                             <span>Team Leader</span>
                         </div>
                     </div>
@@ -53,7 +54,7 @@ export default function ExpertsSection() {
 
                 <div className="expert-right">
                     <img
-                        src="/images/expert-banner.jpg"
+                        src={visiters}
                         alt="Expert"
                     />
                 </div>

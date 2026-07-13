@@ -30,7 +30,7 @@ const testimonials = [
 
 function Testimonials() {
     return (
-        <section className="testimonials">
+        <section className="testimonials" id="testimonals">
 
             <div className="testimonial-heading">
 
@@ -38,7 +38,7 @@ function Testimonials() {
 
                 <h1>What Our Customers Say</h1>
 
-                <p>
+                <div>
                     <h3>Excellent</h3>
                     <h3>A Perfect Vacation in Tanzania</h3>
                     <h3>The Yellow Zebra Team is Top</h3>
@@ -46,7 +46,7 @@ function Testimonials() {
                     <h3>Amazing Time in Tanzania</h3>
 
 
-                </p>
+                </div>
 
             </div>
 

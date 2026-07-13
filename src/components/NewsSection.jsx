@@ -5,27 +5,37 @@ const news = [
     {
         id: 1,
         image:
-            "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=900",
+            "https://www.shutterstock.com/image-photo/two-african-bush-elephant-drinking-260nw-2771866383.jpg",
         title: "Witness the Great Migration in Tanzania",
-        date: "12 March 2026",
+        date: "3 March 2026",
         description:
             "Experience one of nature's greatest spectacles as millions of wildebeest and zebras cross the Serengeti."
     },
     {
         id: 2,
         image:
-            "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900",
-        title: "Top 10 Luxury Safari Lodges",
-        date: "20 March 2026",
+            "https://centralmarket.com.my/wp-content/uploads/2023/11/Rizq-Craft-Shop-1-650x650.jpg",
+        title: "African Handmade Crafts: A Journey Through Tanzania's Artistriy",
+        date: "11 March 2026",
         description:
             "Discover our hand-picked collection of Tanzania's finest luxury safari camps and lodges."
     },
     {
+
         id: 3,
         image:
-            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900",
+            "https://c4.wallpaperflare.com/wallpaper/74/457/102/life-room-interior-home-wallpaper-preview.jpg",
+        title: "Top 10 Luxury Safari Lodges",
+        date: "20 March 2026",
+        description:
+            "Explore the most exclusive and luxurious safari lodges in Tanzania."
+    },
+    {
+        id: 4,
+        image:
+            "https://c8.alamy.com/comp/E615Y0/fisher-family-on-a-pirogue-on-the-congo-river-near-tshumbiri-bandundu-E615Y0.jpg",
         title: "Why Zanzibar is the Perfect Beach Escape",
-        date: "28 March 2026",
+        date: "30 March 2026",
         description:
             "Relax on white sand beaches, explore Stone Town and enjoy unforgettable sunsets."
     }
@@ -33,7 +43,7 @@ const news = [
 
 function NewsSection() {
     return (
-        <section className="news">
+        <section className="news" id="news">
 
             <div className="news-heading">
 

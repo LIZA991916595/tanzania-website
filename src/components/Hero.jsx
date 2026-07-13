@@ -1,111 +1,94 @@
 import React, { useState } from "react";
 import "./Hero.css";
 
-const images = [
+const slides = [
     {
-        id: 1,
-        src: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600",
-        thumb: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=300",
-        title: "Tanzania Safaris"
+        image:
+            "https://images.unsplash.com/photo-1717361279773-b2e7ee713d2e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        title: "Tanzania Safaris",
     },
     {
-        id: 2,
-        src: "https://images.unsplash.com/photo-1516939884455-1445c8652f83?w=1600",
-        thumb: "https://images.unsplash.com/photo-1516939884455-1445c8652f83?w=300",
-        title: "Tanzania Safaris"
+        image:
+            "https://w0.peakpx.com/wallpaper/436/922/HD-wallpaper-running-zebras-seen-from-above.jpg",
+        title: "Tanzania Safaris",
     },
     {
-        id: 3,
-        src: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=1600",
-        thumb: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=300",
-        title: "Tanzania Safaris"
+        image:
+            "https://i.pinimg.com/736x/5c/ee/e0/5ceee01867dd4c0a21a7311aab073ec7.jpg",
+        title: "Tanzania Safaris",
     },
     {
-        id: 4,
-        src: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600",
-        thumb: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=300",
-        title: "Tanzania Safaris"
+        image:
+            "https://plus.unsplash.com/premium_photo-1686090448517-2f692cc45187?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bG9kZ2V8ZW58MHx8MHx8fDA%3D",
+        title: "Tanzania Safaris",
     },
     {
-        id: 5,
-        src: "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=1600",
-        thumb: "https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=300",
-        title: "Tanzania Safaris"
-    }
+        image:
+            "https://static.vecteezy.com/system/resources/thumbnails/073/290/855/small/a-chimpanzee-is-looking-at-the-camera-in-the-forest-free-photo.jpeg",
+        title: "Tanzania Safaris",
+    },
 ];
 
 export default function Hero() {
-
-    const [active, setActive] = useState(0);
+    const [current, setCurrent] = useState(0);
 
     const next = () => {
-        setActive((active + 1) % images.length);
-    }
+        setCurrent((current + 1) % slides.length);
+    };
 
     const prev = () => {
-        setActive((active - 1 + images.length) % images.length);
-    }
+        setCurrent((current - 1 + slides.length) % slides.length);
+    };
 
     return (
-
-        <div className="hero">
+        <section className="hero">
 
             <img
-                src={images[active].src}
+                src={slides[current].image}
                 alt=""
-                className="heroImage"
+                className="hero-bg"
             />
 
             <div className="overlay"></div>
 
-            <button className="arrow left" onClick={prev}>
-                ❮
-            </button>
+            <div className="hero-content">
 
-            <button className="arrow right" onClick={next}>
-                ❯
-            </button>
+                <h1>{slides[current].title}</h1>
 
-            <div className="heroContent">
+                <div className="thumb-row">
 
-                <h1>{images[active].title}</h1>
+                    <button className="circle-btn" onClick={prev}>
+                        ←
+                    </button>
 
-                <p>
-                    Luxury Tanzania Safari Holidays
-                </p>
-
-                <div className="thumbs">
-
-                    {images.map((img, index) => (
-
+                    {slides.map((item, index) => (
                         <img
-
-                            key={img.id}
-
-                            src={img.thumb}
-
-                            alt=""
-
+                            key={index}
+                            src={item.image}
                             className={
-                                active === index
+                                current === index
                                     ? "thumb active"
                                     : "thumb"
                             }
-
-                            onClick={() => setActive(index)}
-
+                            onClick={() => setCurrent(index)}
+                            alt=""
                         />
-
                     ))}
+
+                    <button className="circle-btn" onClick={next}>
+                        →
+                    </button>
 
                 </div>
 
             </div>
 
-            <div className="curve"></div>
+            <button className="wishlist">
+                ♡
+            </button>
 
-        </div>
+            <div className="hero-bottom"></div>
 
+        </section>
     );
-
 }

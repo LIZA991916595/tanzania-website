@@ -30,7 +30,7 @@ const reasons = [
 
 function ReasonsSection() {
     return (
-        <section className="reasons">
+        <section className="reasons" id="reasons">
 
             <div className="reasons-heading">
 

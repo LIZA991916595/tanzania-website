@@ -1,224 +1,108 @@
 .hero {
-
     position: relative;
-
     width: 100%;
-
-    height: 650px;
-
+    height: 760px;
     overflow: hidden;
-
 }
 
-.heroImage {
-
+.hero-bg {
+    position: absolute;
+    inset: 0;
     width: 100%;
-
     height: 100%;
-
     object-fit: cover;
-
-    display: block;
-
+    object-position: center;
 }
+
+
 
 .overlay {
-
     position: absolute;
-
-    left: 0;
-
-    top: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    background: linear-gradient(to top,
-            rgba(0, 0, 0, .55),
-            rgba(0, 0, 0, .15),
-            transparent);
-
+    inset: 0;
+    background: rgba(0, 0, 0, .15);
 }
 
-.heroContent {
-
+.hero-content {
     position: absolute;
-
-    bottom: 70px;
-
     left: 50%;
-
+    bottom: 70px;
     transform: translateX(-50%);
-
-    text-align: center;
-
     width: 100%;
-
-    z-index: 10;
-
+    text-align: center;
+    z-index: 5;
 }
 
-.heroContent h1 {
-
-    color: white;
-
-    font-size: 72px;
-
+.hero-content h1 {
+    color: #fff;
     font-family: Georgia, serif;
-
-    margin-bottom: 10px;
-
+    font-size: 72px;
+    font-weight: 400;
+    margin-bottom: 28px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, .35);
 }
 
-.heroContent p {
-
-    color: white;
-
-    font-size: 20px;
-
-    margin-bottom: 35px;
-
-}
-
-.thumbs {
-
+.thumb-row {
     display: flex;
-
     justify-content: center;
-
-    gap: 15px;
-
+    align-items: center;
+    gap: 16px;
 }
 
 .thumb {
-
-    width: 110px;
-
-    height: 70px;
-
-    border-radius: 14px;
-
-    cursor: pointer;
-
+    width: 115px;
+    height: 80px;
     object-fit: cover;
-
-    opacity: .6;
-
-    border: 3px solid transparent;
-
-    transition: .3s;
-
-}
-
-.thumb:hover {
-
-    opacity: 1;
-
-    transform: scale(1.05);
-
-}
-
-.active {
-
-    opacity: 1;
-
-    border: 3px solid white;
-
-}
-
-.arrow {
-
-    position: absolute;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 55px;
-
-    height: 55px;
-
-    border-radius: 50%;
-
-    border: none;
-
+    border-radius: 12px;
     cursor: pointer;
-
-    font-size: 28px;
-
-    background: #e5c03b;
-
-    color: white;
-
-    z-index: 100;
-
+    border: 3px solid transparent;
+    opacity: .9;
 }
 
-.left {
-
-    left: 40px;
-
+.thumb.active {
+    border-color: #fff;
 }
 
-.right {
 
-    right: 40px;
-
+.circle-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: #d9ad26;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
 }
 
-.arrow:hover {
-
-    background: #caa217;
-
+.circle-btn:hover {
+    background: #c79a16;
 }
 
-.curve {
-
+.wishlist {
     position: absolute;
-
-    bottom: -1px;
-
-    left: 0;
-
-    width: 100%;
-
-    height: 120px;
-
-    background: white;
-
-    clip-path: ellipse(75% 100% at 50% 100%);
-
+    right: 70px;
+    bottom: 58px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background: #fff;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-@media(max-width:900px) {
-
-    .hero {
-
-        height: 520px;
-
-    }
-
-    .heroContent h1 {
-
-        font-size: 48px;
-
-    }
-
-    .thumb {
-
-        width: 80px;
-
-        height: 55px;
-
-    }
-
-    .arrow {
-
-        width: 45px;
-
-        height: 45px;
-
-    }
-
+.hero-bottom {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 18px;
+    background: #fff;
+    border-top-left-radius: 100% 10px;
+    border-top-right-radius: 100% 10px;
 }
