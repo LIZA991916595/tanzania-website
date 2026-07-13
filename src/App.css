@@ -4,14 +4,21 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Inter, sans-serif;
   background: #fff;
   color: #222;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -22,5 +29,34 @@ img {
 .container {
   width: 90%;
   max-width: 1400px;
-  margin: auto;
+  margin: 0 auto;
+}
+
+/* Global Heading Sizes */
+h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Equal spacing between sections */
+section {
+  padding: 100px 0;
 }

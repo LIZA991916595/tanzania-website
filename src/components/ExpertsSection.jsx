@@ -25,16 +25,19 @@ export default function ExpertsSection() {
                     </h3>
 
                     <div className="expert-buttons">
-                        <button className="enquiry-btn">
+                        <button className="enquiry-btn"
+                            onClick={() => alert("Enquiry")}>
                             Make an Enquiry
                         </button>
 
-                        <a
-                            href="tel:+917853842449"
-                            className="call-btn"
-                        >
-                            📞 7853842449
-                        </a>
+
+
+                        <button className="enquiry-btn"
+                            onClick={() => window.location.href = "tel:+917853842449"}>
+                            Call- +91 7853842449
+                        </button>
+
+
                     </div>
 
                     <div className="expert-profile">

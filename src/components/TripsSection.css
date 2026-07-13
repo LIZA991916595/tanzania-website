@@ -124,6 +124,10 @@
     z-index: 10;
 }
 
+section {
+    padding: 70px 0;
+}
+
 .slider-arrow.left {
     left: 60px;
 }

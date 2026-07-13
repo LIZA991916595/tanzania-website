@@ -53,6 +53,10 @@
 
 }
 
+section {
+    padding: 70px 0;
+}
+
 .lodge-card {
 
     background: white;
@@ -60,6 +64,9 @@
     overflow: hidden;
     box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
     transition: .35s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
 }
 
@@ -80,6 +87,9 @@
 .lodge-content {
 
     padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 
 }
 
@@ -104,11 +114,11 @@
     color: #666;
     line-height: 1.8;
     margin-bottom: 22px;
-
+    flex: 1;
 }
 
 .lodge-content button {
-
+    margin-top: auto;
     background: #d4ae39;
     color: white;
     border: none;

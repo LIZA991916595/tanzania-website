@@ -56,6 +56,10 @@
 
 }
 
+section {
+    padding: 70px 0;
+}
+
 .news-card {
 
     background: white;
@@ -63,7 +67,9 @@
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
     transition: .35s;
-
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .news-card:hover {
@@ -81,7 +87,9 @@
 }
 
 .news-content {
-
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding: 25px;
 
 }
@@ -109,11 +117,11 @@
     color: #666;
     line-height: 1.8;
     margin-bottom: 25px;
-
+    flex: 1;
 }
 
 .news-content button {
-
+    margin-top: auto;
     background: #d4ae39;
     color: white;
     border: none;

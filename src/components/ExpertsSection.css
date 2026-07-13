@@ -72,6 +72,10 @@
     cursor: pointer;
 }
 
+section {
+    padding: 70px 0;
+}
+
 .call-btn {
     border: 2px solid #d7ab27;
     padding: 16px 28px;
@@ -101,6 +105,25 @@
 
 .expert-profile span {
     color: #777;
+}
+
+.enquiry-btn {
+    cursor: pointer;
+}
+
+.enquiry-btn {
+    background: #d4ae39;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.enquiry-btn:hover {
+    background: #b8901b;
+    transform: translateY(-2px);
 }
 
 @media(max-width:992px) {

@@ -31,6 +31,10 @@
     margin: 0;
 }
 
+section {
+    padding: 70px 0;
+}
+
 .footer-links li {
     color: #d4d4d4;
     margin-bottom: 18px;

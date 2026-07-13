@@ -3,7 +3,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import NavbarTabs from "../components/NavbarTabs";
 import IntroSection from "../components/IntroSection";
-import VisitSection from "../components/VisitSection";
+
 import TripsSection from "../components/TripsSection";
 import ExpertsSection from "../components/ExpertsSection";
 import ReasonsSection from "../components/ReasonsSection";
@@ -24,7 +24,7 @@ function TanzaniaPage() {
 
             <IntroSection />
 
-            <VisitSection />
+
 
             <TripsSection />
 

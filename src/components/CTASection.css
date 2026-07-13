@@ -51,12 +51,16 @@
 
 }
 
+section {
+    padding: 70px 0;
+}
+
 .cta-left p {
 
     line-height: 1.8;
     font-size: 18px;
     max-width: 650px;
-color:#111
+    color: #111
 }
 
 .cta-right {
@@ -66,6 +70,7 @@ color:#111
     gap: 20px;
 
 }
+
 .cta-btn {
     background: #fff;
     color: #111;
@@ -77,6 +82,7 @@ color:#111
     cursor: pointer;
     transition: .3s;
 }
+
 .cta-btn:hover {
     background: #111;
     color: #fff;
